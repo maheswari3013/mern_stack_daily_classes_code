@@ -171,11 +171,44 @@ Functions/methods:
 JS FUNCTION types
 -----------------------
     1.Anonymous function
+
     2.Normal / named function
     3.Functional expression
     4.Immediate invoking / self calling function
+        ONLY ONCE THROUGHOUT ITS LIFECYCLE
+        you cant acccess outside the block
     5.Arrow function//introduced by ES6 (ecma script)
     6.Nested function
     7.Higher order function
+        any fn that acccept another function as parameter
     8.callback function
+        any fn passing as a value r=to the Higher order function
     9.generator function
+        
+
+OBJECTS:
+--------------
+    ->Objects are real time entities which used to store data n the form 
+    of key and value pair
+
+
+    1.Literal way
+    2.using keyword(create for object class)
+
+    BOM
+    ------
+        BROWSER OBJECT MODEL
+        ->one of the pre  built object present in every browser
+        ->it contains windows object
+        ->methods like console are present in browser
+        methods like prompt, alert, console(log,error,warn,info,table....),sssion storage, fetch, local storage
+    https://viewer.diagrams.net/?tags=%7B%7D&lightbox=1&highlight=0000ff&edit=_blank&layers=1&nav=1&title=DOM%20IN%20JAVASCRIPT.drawio&dark=1#Uhttps%3A%2F%2Fdrive.google.com%2Fuc%3Fid%3D1wX_N7YJu17-dNlZGfupcKyvlNTD-s39u%26export%3Ddownload#%7B%22pageId%22%3A%22w0W7gVwtxNn_7I0n7kZZ%22%7D
+
+DOM(DOCMENT OBJECT MODEL)
+-----------------------------
+        ->DOM are used to manipulate HTML and CSS
+        ->to build dynamic web pages
+        we can apply events in 3 different ways applied
+        1.attribute way
+        2.property way
+        3.add event listener
