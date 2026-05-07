@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        let body = document.querySelector("body")
+
+        let table = document.createElement("table");
+        let thead = document.createElement('thead');
+        let tr1 = document.createElement("tr");
+        let tbody = document.createElement("tbody")
+        tr1.innerHTML = `<th>Name</th>
+                       <th>RollNo</th>
+                       <th>CS</th>
+                       <th>OS</th>
+                       <th>SE</th>
+                       <th>SPM</th>
+                       <th>Total Marks</th>
+                       <th>Percentage</th>
+                       <th>Actions</th>
+                       `
+
+        thead.appendChild(tr1)
+        table.appendChild(thead)
+        body.appendChild(table)
+        table.appendChild(tbody)
+        table.border = 1
+        table.cellSpacing = 0
+        table.cellPadding = 10
+
+
+        let studentDetails = [
+            { name: 'PRAKASH', rollNo: '23NR1A0541', marks: { CS: 90, OS: 98, SE: 90, SPM: 69 } },
+            { name: 'JEEVAN', rollNo: '23NR1A0542', marks: { CS: 80, OS: 88, SE: 78, SPM: 50 } },
+            { name: 'DHARANI', rollNo: '23NR1A0543', marks: { CS: 78, OS: 85, SE: 95, SPM: 75 } },
+            { name: 'MAHESWARI', rollNo: '23NR1A0544', marks: { CS: 88, OS: 80, SE: 76, SPM: 80 } },
+            { name: 'SANDY', rollNo: '23NR1A0545', marks: { CS: 80, OS: 78, SE: 88, SPM: 92 } },
+            { name: 'SUREKHA', rollNo: '23NR1A0546', marks: { CS: 85, OS: 88, SE: 80, SPM: 79 } },
+            { name: 'MANASA', rollNo: '23NR1A0547', marks: { CS: 91, OS: 80, SE: 79, SPM: 86 } },
+            { name: 'SEKHAR', rollNo: '23NR1A0548', marks: { CS: 88, OS: 85, SE: 70, SPM: 69 } },
+            { name: 'MANI', rollNo: '23NR1A0549', marks: { CS: 89, OS: 85, SE: 91, SPM: 68 } },
+            { name: 'NIKKI', rollNo: '23NR1A0550', marks: { CS: 85, OS: 79, SE: 85, SPM: 75 } },
+            { name: 'OMIKA', rollNo: '23NR1A0551', marks: { CS: 78, OS: 75, SE: 85, SPM: 90 } },
+            { name: 'RESHMA', rollNo: '23NR1A0552', marks: { CS: 85, OS: 95, SE: 85, SPM: 75 } },
+            { name: 'DEEKSHI', rollNo: '23NR1A0553', marks: { CS: 74, OS: 85, SE: 90, SPM: 85 } },
+            { name: 'VENKY', rollNo: '23NR1A0554', marks: { CS: 89, OS: 78, SE: 85, SPM: 85 } },
+            { name: 'RUPA', rollNo: '23NR1A0555', marks: { CS: 90, OS: 78, SE: 88, SPM: 70 } },
+            { name: 'GANESH', rollNo: '23NR1A0556', marks: { CS: 89, OS: 88, SE: 75, SPM: 85 } },
+            { name: 'DEVI', rollNo: '23NR1A0557', marks: { CS: 80, OS: 85, SE: 79, SPM: 89 } },
+            { name: 'MAHESH', rollNo: '23NR1A0558', marks: { CS: 88, OS: 85, SE: 79, SPM: 90 } },
+            { name: 'SATISH', rollNo: '23NR1A0559', marks: { CS: 78, OS: 80, SE: 85, SPM: 88 } },
+            { name: 'JAYRAM', rollNo: '23NR1A0560', marks: { CS: 75, OS: 70, SE: 88, SPM: 91 } },
+
+        ]
+        studentDetails.forEach((student) => {
+            let trow = document.createElement('tr');
+            let percentage = ((student.marks.CS + student.marks.OS + student.marks.SE + student.marks.SPM) / 400) * 100;
+            let bgColor = null;
+            if (percentage >= 85 && percentage <= 100) {
+                bgColor = "#00ff00";
+            } else if (percentage >= 65 && percentage <= 85) {
+                bgColor = "yellow"
+            } else if (percentage >= 55 && percentage <= 65) {
+                bgColor = "orange"
+            } else {
+                bgColor = "red"
+            }
+
+            trow.style.backgroundColor = bgColor;
+            trow.innerHTML = `
+                            <td>${student.name} </td>
+                            <td>${student.rollNo} </td>
+                            <td>${student.marks.CS} </td>
+                            <td>${student.marks.OS} </td>
+                            <td>${student.marks.SE} </td>
+                            <td>${student.marks.SPM} </td>
+                            <td>${student.marks.CS + student.marks.OS + student.marks.SE + student.marks.SPM} </td>
+                            <td>${percentage} %</td>
+                            <td>
+                                 <button>Edit</button>
+                                 <button>Delete</button>
+                            </td>
+                            `
+            tbody.appendChild(trow)
+
+        })
+
+
+    </script>
+</body>
+
+</html>
