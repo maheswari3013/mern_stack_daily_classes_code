@@ -5,21 +5,21 @@ function CarouselContainer() {
   return (
     <Carousel>
       <Carousel.Item interval={1000}>
-        <CarouselImage text="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNKgSnJ5D9eC4m2sDaffyH9d6RSp3gGcFwsA&s" />
+        <CarouselImage text="https://static.vecteezy.com/system/resources/thumbnails/054/970/775/small/tiny-shopping-cart-on-computer-keyboard-symbolizes-online-shopping-and-e-commerce-vibrant-background-adds-modern-touch-to-concept-photo.jpeg" />
         <Carousel.Caption>
           <h3>First slide label</h3>
           <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item interval={500}>
-        <CarouselImage text="https://www.shutterstock.com/image-vector/online-shopping-e-commerce-website-260nw-2694751125.jpg" />
+        <CarouselImage text="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSg4SOlGkXMzEaFAvqjSQM1Kq-vJFLYKl-Rvw&s" />
         <Carousel.Caption>
           <h3>Second slide label</h3>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
-        <CarouselImage text="https://thumbs.dreamstime.com/b/shopping-e-commerce-flat-line-illustration-thin-design-website-purchasing-goods-via-internet-online-cart-products-57103985.jpg" />
+        <CarouselImage text="https://png.pngtree.com/thumb_back/fh260/background/20230618/pngtree-swiss-e-commerce-a-3d-rendered-shopping-experience-for-social-media-image_3639492.jpg" />
         <Carousel.Caption>
           <h3>Third slide label</h3>
           <p>

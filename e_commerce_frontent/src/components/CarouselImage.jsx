@@ -1,10 +1,7 @@
-import React from 'react'
-import height from './../../node_modules/dom-helpers/esm/height';
-
 const CarouselImage = (props) => {
   return (
     <div>
-        <img src={props.text} style={{height:"350px", width:"100vw"}} alt=""/>
+      <img src={props.text} style={{height:"350px" ,width:"100vw"}} alt="" />
     </div>
   )
 }

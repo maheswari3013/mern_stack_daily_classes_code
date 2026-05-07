@@ -1,28 +1,27 @@
-import CarouselImage from '../components/CarouselImage';
-import DummyProducts from '../components/DummyProducts';
-import CarouselContainer from './../components/CarouselContainer';
-import FooterComponents from './../components/FooterComponents';
-const LandingPage = () => {
+/* eslint-disable no-unused-vars */
+import React from "react";
+import CarouselContainer from "../components/CarouselContainer";
+import DumiProducts from "../components/DumiProducts";
+import FooterComponent from "../components/FooterComponent";
 
-    const handleGreeting = () => {
-        let txt="Welcome to Alpha Mart";
-       let speech = window.speechSynthesis();
-       let voice = new SpeechSynthesisisUtterance(txt);
-       wspeech.speak(voice);
-       voice.rate=0.1;
-       console.log(wspeech.getVoices());
-       };
+const LandingPage = () => {
+  const handleGreeting = () => {
+    let txt = "Welcome to Alpha Mart";
+    let wSpeech = window.speechSynthesis;
+    let voice = new SpeechSynthesisUtterance(txt);
+    wSpeech.speak(voice);
+    voice.rate=0.1;
+  };
 
   return (
     <div>
-        <button id="greeting-btn">click to announce Greeting</button>
-        <CarouselContainer/>
-        <h1>product name</h1>
-        <DummyProducts/>
-        <FooterComponents/>
-
+      <button id="greeting-btn" onClick={handleGreeting}> Click to Announce Greeting</button>
+      <CarouselContainer />
+      <h1>Products</h1>
+      <DumiProducts />
+      <FooterComponent />
     </div>
-  )
-}
+  );
+};
 
 export default LandingPage;
