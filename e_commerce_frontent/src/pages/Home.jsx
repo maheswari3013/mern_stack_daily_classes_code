@@ -2,9 +2,9 @@ import React from 'react'
 
 const Home = () => {
   return (
-    <div>
-        Home Page
-    </div>
+     <h1 className='text-center'>
+      home page
+    </h1>
   )
 }
 

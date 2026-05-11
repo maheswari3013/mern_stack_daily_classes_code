@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import React from "react";
+import React, { useContext } from "react";
 import CarouselContainer from "../components/CarouselContainer";
 import DumiProducts from "../components/DumiProducts";
 import FooterComponent from "../components/FooterComponent";
@@ -13,10 +13,11 @@ const LandingPage = () => {
     voice.rate=0.1;
   };
 
+
   return (
     <div>
       <button id="greeting-btn" onClick={handleGreeting}> Click to Announce Greeting</button>
-      <CarouselContainer />
+       <CarouselContainer />
       <h1>Products</h1>
       <DumiProducts />
       <FooterComponent />
