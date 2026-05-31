@@ -1,5 +1,6 @@
 const isAdmin = (req, res, next) => {
-  try {
+console.log();
+ try {
     if (req.body.user.role != "admin") {
       return res.status(403).json({ message: "Access Denied , Admin only" });
     }

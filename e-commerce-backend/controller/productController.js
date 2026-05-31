@@ -67,10 +67,10 @@ const getAllProducts = async (req, res) => {
 //filter products based on price
 const filterProductsBasedOnPrice = async (req, res) => {
   try {
-    const { highestPrice, lowestPrice } = req.body;
+    const { min,max } = req.body;
     const filteredProducts = await Products.find({
-      price: { $gte: lowestPrice },
-      price: { $lte: highestPrice },
+      price: { $gte: min},
+      price: { $lte: max },
     });
     res.status(200).json({ filteredProducts });
   } catch (error) {
@@ -81,7 +81,7 @@ const filterProductsBasedOnPrice = async (req, res) => {
 //sort products based on price
 const sortProductsBasedOnPrices = async (req, res) => {
   try {
-    const sortOrder = Number(req.params.order);
+    const sortOrder =req.query|| ;
     const sortedProducts = Products.find().sort({ price: sortOrder });
     res.status(200).json({ sortedProducts });
   } catch (error) {
